@@ -54,4 +54,9 @@ public class LinkedList {
         return node;
 
     }
+
+    public Node dequeue() {
+        head = head.next;
+        return head;
+    }
 }
