@@ -30,4 +30,28 @@ public class LinkedList {
         }
     }
 
+    public Node peek() {
+        Node node = head;
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            while (node.next != null) {
+                node = node.next;
+            }
+        }
+        return node;
+    }
+
+    public Node pop() {
+        Node node = this.head;
+        while (node.next != null) {
+            System.out.println("Popped Element : "+node.next.next.data);
+            node = node.next;
+            node.next = null;
+
+        }
+
+        return node;
+
+    }
 }
